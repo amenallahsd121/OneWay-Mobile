@@ -16,16 +16,20 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE 
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
  */
+
 package com.mycompany.myapp.gui;
 
 import com.codename1.components.ScaleImageLabel;
+import com.codename1.ui.Command;
 import com.codename1.ui.Component;
+import com.codename1.ui.Container;
 import com.codename1.ui.Display;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.Toolbar;
+import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.layouts.Layout;
@@ -49,13 +53,14 @@ public class BaseFormBack extends Form {
     public BaseFormBack(String title, Layout contentPaneLayout) {
         super(title, contentPaneLayout);
     }
-
+    
+    
     public Component createLineSeparator() {
         Label separator = new Label("", "WhiteSeparator");
         separator.setShowEvenIfBlank(true);
         return separator;
     }
-
+    
     public Component createLineSeparator(int color) {
         Label separator = new Label("", "WhiteSeparator");
         separator.getUnselectedStyle().setBgColor(color);
@@ -67,23 +72,31 @@ public class BaseFormBack extends Form {
     protected void addSideMenu(Resources res) {
         Toolbar tb = getToolbar();
         Image img = res.getImage("profile-background.jpg");
-        if (img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {
+        if(img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {
             img = img.scaledHeight(Display.getInstance().getDisplayHeight() / 3);
         }
         ScaleImageLabel sl = new ScaleImageLabel(img);
         sl.setUIID("BottomPad");
         sl.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FILL);
-
+        
         tb.addComponentToSideMenu(LayeredLayout.encloseIn(
                 sl,
                 FlowLayout.encloseCenterBottom(
                         new Label(res.getImage("profile-pic.jpg"), "PictureWhiteBackgrond"))
         ));
-
+        
         tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_PERSON, e -> new NewsfeedForm(res).show());
-
-        tb.addMaterialCommandToSideMenu("Réclamation & Reponse", FontImage.MATERIAL_REPORT, e -> new Reponselist(res).show());
-
+        tb.addMaterialCommandToSideMenu("Livreur", FontImage.MATERIAL_RUN_CIRCLE  , e -> new LivreurList(res).show());
+        tb.addMaterialCommandToSideMenu("Livraison", FontImage.MATERIAL_LOCAL_SHIPPING  , e -> new ListerLivraison(res).show());
+        tb.addMaterialCommandToSideMenu("Réclamation", FontImage.MATERIAL_REPORT, e -> new Reponselist(res).show());
+        tb.addMaterialCommandToSideMenu("Categorie Vehicule", FontImage.MATERIAL_ELECTRIC_CAR, e -> new CategListe(res).show());
+        tb.addMaterialCommandToSideMenu("Vehicule", FontImage.MATERIAL_ELECTRIC_CAR, e -> new VehiculeList(res).show());
+        tb.addMaterialCommandToSideMenu("Maintenance Vehicule", FontImage.MATERIAL_ELECTRIC_CAR, e -> new MainList(res).show());
+        tb.addMaterialCommandToSideMenu("Evenement", FontImage.MATERIAL_EVENT, e -> new EvenementList(res).show());
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new WalkthruForm(res).show());
+
+
+
+        
     }
 }

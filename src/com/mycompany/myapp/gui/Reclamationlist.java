@@ -12,7 +12,9 @@ import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.Border;
 import com.codename1.ui.util.Resources;
+import com.mycompany.myapp.entities.Livreur;
 import com.mycompany.myapp.entities.Reclamation;
+import com.mycompany.myapp.service.ServiceLivreur;
 import com.mycompany.myapp.service.ServiceReclamation;
 import java.util.ArrayList;
 

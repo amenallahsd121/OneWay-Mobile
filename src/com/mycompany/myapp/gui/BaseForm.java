@@ -72,6 +72,7 @@ public class BaseForm extends Form {
         if(img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {
             img = img.scaledHeight(Display.getInstance().getDisplayHeight() / 3);
         }
+        
         ScaleImageLabel sl = new ScaleImageLabel(img);
         sl.setUIID("BottomPad");
         sl.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FILL);
@@ -83,10 +84,11 @@ public class BaseForm extends Form {
         ));
         
         tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_PERSON, e -> new NewsfeedForm(res).show());
-      
-        
+        //tb.addMaterialCommandToSideMenu("Participation Evenement", FontImage.MATERIAL_RUN_CIRCLE  , e -> new LivreurList(res).show());
+        tb.addMaterialCommandToSideMenu("Colis", FontImage.MATERIAL_RUN_CIRCLE  , e -> new ColisList(res).show());
         tb.addMaterialCommandToSideMenu("Reclamation", FontImage.MATERIAL_REPORT, e -> new Reclamationlist(res).show());
-       
+       // tb.addMaterialCommandToSideMenu("O & D", FontImage.MATERIAL_ELECTRIC_CAR, e -> new CategListe(res).show());
+       // tb.addMaterialCommandToSideMenu("Opp", FontImage.MATERIAL_EVENT, e -> new EvenementList(res).show());
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new WalkthruForm(res).show());
     }
 }
