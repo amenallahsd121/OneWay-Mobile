@@ -17,28 +17,24 @@ import com.mycompany.myapp.entities.Livreur;
 import com.mycompany.myapp.entities.Reclamation;
 import com.mycompany.myapp.service.ServiceLivreur;
 import com.mycompany.myapp.service.ServiceReclamation;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
  * @author amens
  */
-public class AjouterReclamation  extends BaseForm {
-    
-    
-      public AjouterReclamation(Resources res) {
+public class AjouterReclamation extends BaseForm {
+
+    public AjouterReclamation(Resources res) {
         setTitle("Ajouter une Reclamation");
         setLayout(new BoxLayout(BoxLayout.Y_AXIS));
 
+        List<String> grosmot = Arrays.asList("merde", "fuck", "shit", "con", "connart", "putain", "pute", "chier", "bitch", "bèullshit", "bollocks", "damn", "putin");
 
-        
-       
+        TextField text_recField = new TextField("", " text_rec", 40, TextField.ANY);
 
-        
-
-    
-         TextField text_recField = new TextField("", " text_rec", 40, TextField.ANY);
-    
-       ComboBox<String> typeBox = new ComboBox<>("Livreur", "Service", "Retard de livraison", "Autres");
+        ComboBox<String> typeBox = new ComboBox<>("Livreur", "Service", "Retard de livraison", "Autres");
         typeBox.setSelectedItem("Sujet ");
 
         Style textFieldStyle = new Style();
@@ -47,29 +43,44 @@ public class AjouterReclamation  extends BaseForm {
         //sujetField.setUnselectedStyle(textFieldStyle);
         Button ajouterButton = new Button("Ajouter");
         ajouterButton.addActionListener(e -> {
- 
-            
-            String  text_rec = text_recField.getText();
-        
+
+            String text_rec = text_recField.getText();
+
             String sujet = typeBox.getSelectedItem();
 
-            
-            Reclamation reclamation = new Reclamation(text_rec, sujet);
+            boolean containsGrosmot = false;
 
-            // Add the Livreur using the LivreurService
-           ServiceReclamation.getInstance().ajouterReclamation(reclamation);
+            for (String grosmotWord : grosmot) {
+                if (text_rec.contains(grosmotWord)) {
+                    containsGrosmot = true;
+                    break;
+                }
+            }
 
-            // Show a confirmation dialog
-            Dialog.show("Succès", "La Reclamation a été ajouté avec succès", "OK", null);
+            if (containsGrosmot) {
+                Dialog.show("Alerte", "Le texte contient un gros mot !", "OK", null);
+                return;
+            } else {
+                Reclamation reclamation = new Reclamation(text_rec, sujet);
 
-            // Go back to the LivreurList form
-            new Reclamationlist(res).showBack();
+                // Add the Livreur using the LivreurService
+                ServiceReclamation.getInstance().ajouterReclamation(reclamation);
+
+                // Show a confirmation dialog
+                Dialog.show("Succès", "La Reclamation a été ajouté avec succès", "OK", null);
+
+                // Go back to the LivreurList form
+                new Reclamationlist(res).showBack();
+
+            }
+
         });
 
         // Add the text fields and button to the form
-      
+         addComponent(typeBox);
         addComponent(text_recField);
-        addComponent(typeBox);
+        
+      
         addComponent(ajouterButton);
 
         // Add a back button to the top of the form
@@ -77,8 +88,5 @@ public class AjouterReclamation  extends BaseForm {
         retourButton.addActionListener(e -> new Reclamationlist(res).showBack());
         addComponent(retourButton);
     }
-      
-      
 
-    
 }
