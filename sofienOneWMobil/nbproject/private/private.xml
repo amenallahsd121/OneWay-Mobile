@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/ModifierEvenement.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/AjouterReponse.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/ParticipationEventList.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/AjouterReclamation.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/entities/Participation.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/AjouterLivreur.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/EvenementList.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/entities/Categorie.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/AjouterVehicule.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/service/ServiceReclamation.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/ActivateForm.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/BaseForm.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/entities/Reclamation.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/AjouterParticipation.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/service/ServiceParticipation.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/ParticipationAdmin.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/AjouterEvenement.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/ModifierReclamation.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/AjouterMaintenance.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/LivreurList.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/entities/Evenement.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/entities/Reponse.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/ModifierCategorie.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/entities/Livreur.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/AjouterCategorie.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/service/ServiceLivreur.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/utils/Statics.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/service/ServiceReponse.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/service/ServiceEvenement.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/ModifierLivreur.java</file>
+            <file>file:/C:/Users/Meddeb%20sofien/Desktop/Colis/src/com/mycompany/myapp/gui/BaseFormBack.java</file>
+        </group>
+    </open-files>
+</project-private>
